@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": ["javascript", "typescript"],
+  "prettier.requireConfig": true,
+  "files.autoSave": "onWindowChange",
+  "files.autoSaveDelay": 1000,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "editor.codeActionsOnSave": ["source.fixAll", "eslint.fixAll"],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "path-intellisense.mappings": {
+    "@components": "${workspaceFolder}/src/components",
+    "@utils": "${workspaceFolder}/src/utils",
+    "@assets": "${workspaceFolder}/src/assets",
+    "@styles": "${workspaceFolder}/src/styles"
+  },
+  "typescript.baseUrl": "./"
+}

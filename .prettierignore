@@ -1,0 +1,11 @@
+dist/
+build/
+*.min.js
+*.bundle.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+node_modules/
+*.tmp
+*.log
+.prettierrc
