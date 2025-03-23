@@ -5,10 +5,11 @@ import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
+import jestPlugin from 'eslint-plugin-jest';
 
 export default defineConfig([
   {
-    files: ['**/*.{js,mjs,cjs,ts}'],
+    files: ['**/*.{js,mjs,cjs,ts}', '**/__test__/**/*.ts', '**/*.test.ts'],
     languageOptions: {
       parser: typescriptParser,
       globals: { ...globals.browser, ...globals.node },
@@ -17,9 +18,11 @@ export default defineConfig([
       js,
       '@typescript-eslint': typescriptPlugin,
       prettier: prettierPlugin,
+      jest: jestPlugin,
     },
     rules: {
       ...typescriptPlugin.configs.recommended.rules,
+      ...jestPlugin.configs.recommended.rules,
       'prettier/prettier': 'error',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
